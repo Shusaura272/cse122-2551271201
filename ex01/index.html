@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 01: Trang thơ "Bốn mùa"</title>
+    <style>
+        /* Biến CSS tập trung để đồng bộ màu sắc toàn trang */
+        :root {
+            --mau-nen-khung: #FFFDE7;
+            --mau-vien-khung: #9E9E9E;
+            --mau-nen-tieu-de: #FFD9E6;
+            --mau-do: #D40000;
+            --mau-xanh: #0033CC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Căn giữa khung thơ trên màn hình bằng Flexbox */
+        body {
+            font-family: "Times New Roman", "Segoe UI", serif;
+            background: #F7F7F2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 16px;
+        }
+
+        /* Khung bao bài thơ */
+        article.khung-tho {
+            width: 640px;
+            max-width: 100%;
+            background: var(--mau-nen-khung);
+            border: 1px solid var(--mau-vien-khung);
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+        }
+
+        /* Tiêu đề in hoa trên dải nền hồng phấn */
+        article.khung-tho h1 {
+            background: var(--mau-nen-tieu-de);
+            color: var(--mau-do);
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 0;
+            margin: 0 0 20px;
+        }
+
+        /* Ba khổ thơ: in nghiêng, căn giữa, ngắt dòng bằng <br> */
+        article.khung-tho p {
+            font-style: italic;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        /* Khổ 1 và khổ 3 màu xanh dương */
+        p.kho-xanh {
+            color: var(--mau-xanh);
+        }
+
+        /* Khổ 2 ở giữa màu đỏ */
+        p.kho-do {
+            color: var(--mau-do);
+        }
+
+        /* Đường kẻ ngang giữa các khổ: rộng 55% khung, xanh dương */
+        article.khung-tho hr {
+            width: 55%;
+            border: none;
+            border-top: 1px solid var(--mau-xanh);
+            margin: 18px auto;
+        }
+
+        /* Thích ứng màn hình nhỏ */
+        @media (max-width: 680px) {
+            article.khung-tho {
+                padding: 18px 14px;
+            }
+
+            article.khung-tho h1 {
+                font-size: 22px;
+            }
+
+            article.khung-tho p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="khung-tho">
+        <h1>Bốn mùa</h1>
+
+        <p class="kho-xanh">
+            Xuân về hoa nở khắp trời<br>
+            Hạ sang nắng cháy rạng ngời phố quen<br>
+            Thu về lá rụng bên thềm
+        </p>
+
+        <hr>
+
+        <p class="kho-do">
+            Đông sang gió lạnh bên em đợi chờ<br>
+            Bốn mùa là bốn giấc mơ<br>
+            Thời gian đi mãi ta chờ đợi ai
+        </p>
+
+        <hr>
+
+        <p class="kho-xanh">
+            Một năm rồi lại một năm<br>
+            Vẫn còn câu hát thì thầm quê hương<br>
+            Chờ xuân nắng mới soi đường
+        </p>
+    </article>
+</body>
+</html>

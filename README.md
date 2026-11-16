@@ -4,6 +4,10 @@
 
 ```
 .
+├── bai01/
+│   └── index.html
+├── ex01/
+│   └── index.html
 ├── bai02/
 │   ├── index.html
 │   └── Anh/Bai02/greatwall.jpg
@@ -17,6 +21,16 @@
     ├── index.html
     └── Anh/Bai03/vinh-ha-long.jpg
 ```
+
+## Bài 01 — Trang thơ "Bốn mùa"
+
+- Biến CSS `:root` — gom toàn bộ màu (`--mau-nen-khung`, `--mau-do`, `--mau-xanh`…) để đồng bộ trang.
+- Flexbox trên `<body>` — căn giữa khối thơ theo cả chiều dọc và ngang.
+- `article.khung-tho` — nền `#FFFDE7`, viền `1px solid #9E9E9E`, rộng 640px, `padding: 24px`, `text-align: center`.
+- `<h1>` in hoa `text-transform: uppercase`, chữ `#D40000` trên dải nền hồng `#FFD9E6`, cỡ 26px, `padding: 6px 0`, `margin: 0 0 20px`.
+- `<br>` ngắt 3 câu thơ mỗi khổ; `font-style: italic`, `line-height: 1.7`.
+- Khổ 1 & 3 `p.kho-xanh` màu `#0033CC`, khổ 2 `p.kho-do` màu `#D40000`.
+- `<hr>` rộng 55% khung, kẻ xanh dương `#0033CC`, `margin: 18px auto`.
 
 ## Bài 02 — Quảng cáo tour du lịch "Hành trình Trung Hoa"
 
@@ -37,5 +51,5 @@
 
 ## Xem thử
 
-Mở `bai02/index.html` hoặc `bai03/index.html` bằng trình duyệt, hoặc dùng GitHub Pages:
-`https://<username>.github.io/cse122-2551271201/bai03/`
+Mở `index.html` trong từng thư mục `bai01/`, `bai02/`, `bai03/` bằng trình duyệt, hoặc dùng GitHub Pages:
+`https://<username>.github.io/cse122-2551271201/bai01/`
