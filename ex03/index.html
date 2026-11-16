@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 03: Trang giới thiệu Di sản Vịnh Hạ Long</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Nền toàn trang: dải màu xanh biển chuyển sắc */
+        body {
+            font-family: "Times New Roman", "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(180deg, #7ec8e3, #0a5c8a);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 16px;
+        }
+
+        /* Khung bài viết: thẻ trắng bo góc, đổ bóng sâu */
+        article.bai-viet {
+            width: 820px;
+            max-width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 28px;
+            box-shadow: 0 18px 40px rgba(4, 40, 62, 0.45);
+        }
+
+        /* Tiêu đề căn giữa, xanh biển đậm */
+        article.bai-viet h1 {
+            text-align: center;
+            color: #0b3d5c;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Hộp dẫn nhập (Sapo): nền xanh đậm, chữ trắng, in nghiêng */
+        p.sapo {
+            background: #0b3d5c;
+            color: #FFFFFF;
+            font-style: italic;
+            padding: 14px 18px;
+            border-radius: 6px;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        /* Ảnh Vịnh Hạ Long nổi bên phải, cạnh hai đoạn thân bài */
+        img.anh-noi {
+            float: right;
+            width: 280px;
+            margin: 0 0 14px 18px;
+            border-radius: 6px;
+            box-shadow: 0 5px 14px rgba(4, 40, 62, 0.35);
+        }
+
+        /* Hai đoạn thân bài căn đều hai lề */
+        p.than-bai {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #1b2a33;
+            margin-bottom: 16px;
+        }
+
+        /* Chữ cái đầu đoạn phóng to theo phong cách báo chí (Drop Cap) */
+        p.than-bai::first-letter {
+            float: left;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #0b3d5c;
+            line-height: 0.85;
+            padding: 0.1rem 0.4rem 0 0;
+        }
+
+        p.than-bai:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* Clear float để ảnh không tràn khỏi khung */
+        article.bai-viet::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* Thích ứng màn hình nhỏ */
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 8px;
+            }
+
+            article.bai-viet {
+                padding: 18px;
+            }
+
+            article.bai-viet h1 {
+                font-size: 22px;
+            }
+
+            img.anh-noi {
+                float: none;
+                display: block;
+                width: 100%;
+                max-width: 340px;
+                margin: 0 auto 16px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="bai-viet">
+        <h1>Vịnh Hạ Long – Kỳ quan thiên nhiên thế giới</h1>
+
+        <p class="sapo">Vịnh Hạ Long thuộc tỉnh Quảng Ninh, nổi tiếng với gần 2.000 hòn đảo đá vôi lớn nhỏ, được UNESCO công nhận là Di sản thiên nhiên thế giới.</p>
+
+        <img class="anh-noi" src="Anh/Bai03/vinh-ha-long.jpg" alt="Vịnh Hạ Long với những đảo đá vôi trên mặt biển xanh ngọc">
+
+        <p class="than-bai">Vịnh trải rộng trên vùng biển Đông Bắc, nơi những đảo đá muôn hình dáng nổi trên mặt nước xanh ngọc. Du khách có thể ngủ đêm trên du thuyền, chèo kayak xuyên hang, ngắm bình minh từ đảo Titop hay khám phá hang Sửng Sốt huyền ảo.</p>
+
+        <p class="than-bai">Hải sản Hạ Long phong phú, con người thân thiện, cảnh sắc bốn mùa đều đẹp — đây là điểm đến không thể bỏ lỡ của du khách trong và ngoài nước.</p>
+    </article>
+</body>
+</html>
